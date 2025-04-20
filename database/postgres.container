@@ -10,7 +10,7 @@ HealthInterval=300s
 HealthOnFailure=kill
 HealthRetries=3
 HealthTimeout=3s
-Image=docker.io/library/postgis/postgis:17-3.5-alpine
+Image=docker.io/postgis/postgis:17-3.5-alpine
 LogDriver=k8s-file
 LogOpt=max-size=1m
 LogOpt=max-file=1
