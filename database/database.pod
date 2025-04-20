@@ -1,11 +1,11 @@
 [Unit]
-Description=Pod containing database containers
+Description=Pod containing postgres containers
 Requires=services-network.service
 After=services-network.service
 
 [Pod]
 Network=services.network
-PodName=databases
+PodName=postgres
 PublishPort=127.0.0.1:5432:5432
 
 [Service]
