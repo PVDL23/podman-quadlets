@@ -1,0 +1,24 @@
+[Unit]
+Description=Kafka broker and controller container
+
+[Container]
+AutoUpdate=registry
+ContainerName=kafka
+EnvironmentFile=kafka.env
+# HealthCmd=pg_isready -U postgres -d postgres
+# HealthInterval=300s
+# HealthOnFailure=kill
+# HealthRetries=3
+# HealthTimeout=3s
+Image=docker.io/apache/kafka-native:latest
+LogDriver=k8s-file
+LogOpt=max-size=1m
+LogOpt=max-file=1
+# Notify=healthy
+Pod=kafka.pod
+Pull=newer
+StartWithPod=true
+
+[Service]
+Restart=always
+TimeoutStartSec=900
