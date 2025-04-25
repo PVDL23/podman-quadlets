@@ -3,7 +3,6 @@ Description=Kafka broker and controller container
 
 [Container]
 AutoUpdate=registry
-ContainerName=kafka
 EnvironmentFile=kafka.env
 # HealthCmd=pg_isready -U postgres -d postgres
 # HealthInterval=300s

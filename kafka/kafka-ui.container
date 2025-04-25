@@ -3,7 +3,6 @@ Description=Kafbat UI container
 
 [Container]
 AutoUpdate=registry
-ContainerName=kafka-ui
 EnvironmentFile=kafka-ui.env
 # HealthCmd=pg_isready -U postgres -d postgres
 # HealthInterval=300s
