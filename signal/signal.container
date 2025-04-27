@@ -9,7 +9,7 @@ Image=docker.io/bbernhard/signal-cli-rest-api
 LogDriver=k8s-file
 LogOpt=max-size=1m
 LogOpt=max-file=1
-Pod=api.pod
+Pod=signal.pod
 Pull=newer
 StartWithPod=true
 Volume=signal-data.volume:/home/.local/share/signal-cli:rw,Z
