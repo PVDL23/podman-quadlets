@@ -1,0 +1,16 @@
+[Unit]
+Description=Pod for signal API
+Requires=services-network.service
+After=services-network.service
+
+[Pod]
+Network=services.network
+PodName=signal
+PublishPort=127.0.0.1:7080:8080
+
+[Service]
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target default.target
