@@ -15,7 +15,7 @@ LogDriver=k8s-file
 LogOpt=max-size=1m
 LogOpt=max-file=1
 Notify=healthy
-Pod=database.pod
+Pod=postgres.pod
 Pull=newer
 StartWithPod=true
 Volume=postgres-data.volume:/var/lib/postgresql/data/:rw,Z
