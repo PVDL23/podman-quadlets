@@ -12,7 +12,7 @@ LogOpt=max-file=1
 Pod=signal.pod
 Pull=newer
 StartWithPod=true
-Volume=signal-data.volume:/home/.local/share/signal-cli:rw,Z
+Volume=signal.volume:/home/.local/share/signal-cli:rw,Z
 
 [Service]
 Restart=always
