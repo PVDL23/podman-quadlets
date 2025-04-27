@@ -4,7 +4,7 @@ Description=Signal container
 [Container]
 AutoUpdate=registry
 ContainerName=signal-api
-Environment=MODE=native
+EnvironmentFile=signal.env
 Image=docker.io/bbernhard/signal-cli-rest-api:latest
 LogDriver=k8s-file
 LogOpt=max-size=1m
