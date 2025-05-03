@@ -1,0 +1,26 @@
+[Unit]
+Description=Airflow PostgreSQL container
+
+[Container]
+AutoUpdate=registry
+ContainerName=airflow-postgres
+EnvironmentFile=airflow-postgres.env
+HealthCmd=pg_isready -U airflow
+HealthInterval=10s
+HealthOnFailure=kill
+HealthRetries=5
+HealthTimeout=10s
+HealthStartPeriod=5s
+Image=docker.io/postgres/postgres:13
+LogDriver=k8s-file
+LogOpt=max-size=1m
+LogOpt=max-file=1
+Notify=healthy
+Pod=airflow.pod
+Pull=newer
+StartWithPod=true
+Volume=airflow-postgres-data.volume:/var/lib/postgresql/data/:rw,Z
+
+[Service]
+Restart=always
+TimeoutStartSec=900
