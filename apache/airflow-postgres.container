@@ -11,7 +11,7 @@ HealthOnFailure=kill
 HealthRetries=5
 HealthTimeout=10s
 HealthStartPeriod=5s
-Image=docker.io/postgres/postgres:13
+Image=docker.io/library/postgres:13
 LogDriver=k8s-file
 LogOpt=max-size=1m
 LogOpt=max-file=1
