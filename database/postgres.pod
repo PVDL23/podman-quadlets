@@ -6,7 +6,7 @@ After=services-network.service
 [Pod]
 Network=services.network
 PodName=postgres
-PublishPort=127.0.0.1:5432:5432
+PublishPort=5432:5432
 
 [Service]
 Restart=always
